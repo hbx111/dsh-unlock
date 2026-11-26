@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Prompt unlock",
+    "description": "Registers a permissive content policy and a closing priority override in every agent's system prompt, and swaps any strict <content_policy> block another source contributed for that policy. It changes prompt text only: no host file, session record, or provider setting is touched, so turning it off restores the previous wording at the next assembly. The policy is read from ~/.dsh/unlock/policy.txt when present and ~/.dsh/unlock/prompt.txt is prepended to it, both re-read on every assembly, so edits apply to the next request without a restart. Switches live in this bundle's cordis.patch.yml row: enabled, overlay, replaceStrictBlock, log. It cannot outrank a gateway that replaces the whole system prompt, such as a prompt.mode=custom gateway that supplies its own full prompt, and it does not add text to user messages.",
+    "detail": "docs/DETAIL.md"
+  }
+}

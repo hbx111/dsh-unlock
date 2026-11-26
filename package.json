@@ -1,0 +1,39 @@
+{
+  "name": "dsh-unlock",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "给系统提示词挂上宽松内容政策与末尾兜底段，并把别处带来的严格 content_policy 块就地换掉。",
+  "license": "MIT",
+  "author": "hbx111",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis",
+    "system-prompt",
+    "content-policy"
+  ],
+  "engines": {
+    "dsh": "^0.2.3-alpha.2"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

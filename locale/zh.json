@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "破甲",
+    "description": "给每个智能体的系统提示词挂上宽松内容政策与末尾「优先级最高」兜底段，并把别处带来的严格 <content_policy> 块就地换成同一份政策。它只改提示词文本：不动宿主文件、不写会话记录、不改模型设置，关掉后下一次装配就恢复原样。政策取自 ~/.dsh/unlock/policy.txt（存在时整份替换），~/.dsh/unlock/prompt.txt 会前置到政策开头；两个文件每次装配都按 mtime 重读，改完下一次请求即生效，不用重启。开关在本组合包 cordis.patch.yml 的那一行里：enabled、overlay、replaceStrictBlock、log。它压不过整段替换系统提示词的网关（例如自带整份提示词、以 prompt.mode=custom 整体覆盖的模式），也不会往用户消息里追加内容。",
+    "detail": "docs/DETAIL.zh.md"
+  }
+}

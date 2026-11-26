@@ -1,0 +1,16 @@
+# dsh-unlock 组合包 patch：只插入自身一行。
+# 开关与选项都在下面 config 里；在 profile 补丁层写同名 id 覆盖时会整段替换 config，
+# 所以四个字段一律写全，免得漏掉的字段回到本文件的缺省。
+#
+#   enabled              false = 整个插件不注册任何东西
+#   overlay              false = 只换政策块，不追加末尾兜底（对应脚本 --no-overlay）
+#   replaceStrictBlock   false = 只挂自己的政策段，不去改别处带来的 <content_policy>
+#   log                  false = 不写 ~/.dsh/unlock/unlock.log
+- insert:
+    - id: dsh-unlock
+      name: 'dsh-unlock'
+      config:
+        enabled: true
+        overlay: true
+        replaceStrictBlock: true
+        log: true
